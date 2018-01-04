@@ -1,0 +1,60 @@
+.animation {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  margin-top: 25%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  display: block; }
+
+.animation-text:before {
+  content: "Loading"; }
+
+.animation-dots > div {
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #0093f9;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 35px; }
+
+@keyframes left {
+  0% {
+    transform: translateX(0.7vw); }
+  100% {
+    transform: translateX(-60vw); } }
+@keyframes right {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(60vw); } }
+@keyframes middle {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(0.6vw); } }
+@keyframes middle2 {
+  0% {
+    transform: translateX(0); }
+  50% {
+    transform: translateX(0.15vw); }
+  100% {
+    transform: translateX(0.6vw); } }
+.dot-1 {
+  animation: left 2s infinite reverse; }
+
+.dot-2 {
+  animation: middle 2s infinite; }
+
+.dot-3 {
+  animation: middle2 2s infinite; }
+
+.dot-4 {
+  animation: right 2s infinite; }
+
+/*# sourceMappingURL=style.css.map */
