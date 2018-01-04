@@ -1,0 +1,74 @@
+$animation_text: 'Loading'
+$anim_duration: 2s
+$font: 'Montserrat', sans-serif
+$dot_color: #0093f9
+$dot_size: 6px
+
+.animation
+  font:
+    family: $font
+    weight: bold
+    size: 17px
+
+  margin-top: 25%
+  text-align: center
+  top: 50%
+  left: 50%
+  max-width: 100%
+  max-height: 100%
+  overflow: hidden
+  display: block
+
+.animation-text
+  &:before
+    content: $animation_text
+
+.animation-dots
+  > div
+    margin-top: 10px
+    display: inline-block
+    background-color: $dot_color
+    content: ""
+    width: $dot_size
+    height: $dot_size
+    border-radius: 35px
+
+@keyframes left
+  0%
+    transform: translateX(0.7vw)
+  100%
+    transform: translateX(-60vw)
+
+@keyframes right
+  0%
+    transform: translateX(0)
+  100%
+    transform: translateX(60vw)
+
+@keyframes middle
+  0%
+    transform: translateX(0)
+  100%
+    transform: translateX(0.6vw)
+
+@keyframes middle2
+  0%
+    transform: translateX(0)
+  50%
+    transform: translateX(0.15vw)
+  100%
+    transform: translateX(0.6vw)
+
+.dot-1
+  animation: left $anim_duration infinite reverse
+
+.dot-2
+  animation: middle $anim_duration infinite
+
+
+.dot-3
+  animation: middle2 $anim_duration infinite
+
+.dot-4
+  animation: right $anim_duration infinite
+
